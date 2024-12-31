@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
+    then echo "Please run as root"
+    exit
 fi
 
 apt update
@@ -19,8 +19,8 @@ APT_PKGS=(
 
 for i in "${APT_PKGS[@]}"
 do
-	 echo "Installing package $i -------------------------"
-   apt install "$i" -y
-   echo "Package $i installation finished --------------"
+    echo "Installing package $i -------------------------"
+    apt install "$i" -y
+    echo "Package $i installation finished --------------"
 done
 apt --fix-broken install
