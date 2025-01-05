@@ -14,7 +14,7 @@ APT_PKGS=(
 	libbz2-dev libreadline-dev libsqlite3-dev curl git
 	zsh libncursesw5-dev xz-utils tk-dev libxml2-dev
 	libxmlsec1-dev libffi-dev liblzma-dev
-	uuid-dev gh zio
+	uuid-dev gh zio flatpak ninja-build libgtk-3-dev clang
 )
 
 for i in "${APT_PKGS[@]}"
@@ -24,3 +24,6 @@ do
     echo "Package $i installation finished --------------"
 done
 apt --fix-broken install
+
+# stuff from flathub:
+# spotify, libreoffice, xournall++, musescore, 
