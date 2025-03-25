@@ -14,7 +14,7 @@ APT_PKGS=(
 	libbz2-dev libreadline-dev libsqlite3-dev curl git
 	zsh libncursesw5-dev xz-utils tk-dev libxml2-dev
 	libxmlsec1-dev libffi-dev liblzma-dev
-	uuid-dev gh zio
+	uuid-dev gh zio dos2unix
 )
 
 for i in "${APT_PKGS[@]}"
