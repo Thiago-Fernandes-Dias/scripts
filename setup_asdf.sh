@@ -1,17 +1,15 @@
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
 . "$HOME/.asdf/asdf.sh"
+
 ASDF_PLUGINS=(
-	chezmoi python nodejs java
+	chezmoi python nodejs java maven
 )
 
-asdf plugin add chezmoi
-asdf plugin add python
-asdf plugin add java
 for i in "${ASDF_PLUGINS[@]}"
 do
     echo "Installing asdf plugin $i -------------------------"
-   adsf plugin add "$i"
-   echo "asdf plugin $i installation finished --------------"
+    adsf plugin add "$i"
+    echo "asdf plugin $i installation finished --------------"
 done
 
 asdf install java openjdk-21
@@ -25,3 +23,6 @@ asdf global nodejs latest
 
 asdf install chezmoi latest
 asdf global chezmoi latest
+
+asdf install maven latest
+asdf global maven latest
