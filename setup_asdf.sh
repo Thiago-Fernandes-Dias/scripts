@@ -25,3 +25,5 @@ asdf global nodejs latest
 
 asdf install chezmoi latest
 asdf global chezmoi latest
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
